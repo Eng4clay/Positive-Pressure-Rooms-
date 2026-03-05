@@ -454,25 +454,37 @@
         </ul>
 
         <!-- COMPLIANCE CARD -->
-        <div class="compliance-box">
-            <h3 style="color:var(--primary-dark); margin-top:0;">📐 ASHRAE Standard 170-2021</h3>
-            <p>Minimum positive pressure differential <strong>+2.5 Pa</strong>; best practice keeps it below <strong>+6 Pa</strong> to ensure door operation. Our facility adopts <strong>2.5 – 6 Pa</strong> as benchmark.</p>
+        <!-- في قسم الملاحظات الفنية داخل الصفحة الثانية، قم بإضافة أو تحديث كتلة المعادلات لتصبح: -->
 
-            <div class="formula-block">
-                <p><strong>⚡ Air Changes per Hour (ACH)</strong><br>
-                \[ACH = \frac{Q}{V}\]   (Q = m³/h, V = m³)</p>
-                <p><strong>🌬️ Velocity to Flow</strong><br>
-                \[Q = A \times v \times 3600\]</p>
-                <p><strong>📊 Pressure from velocity</strong><br>
-                \[\Delta P = \frac{1}{2} \rho v^{2}, \quad \rho \approx 1.2\ \text{kg/m}^3\]</p>
-            </div>
+    <div class="compliance-box">
+        <h3 style="color:var(--primary-dark); margin-top:0;">📐 ASHRAE Standard 170-2021</h3>
+        <p>Minimum positive pressure differential <strong>+2.5 Pa</strong>; best practice keeps it below <strong>+6 Pa</strong> to ensure door operation. Our facility adopts <strong>2.5 – 6 Pa</strong> as benchmark.</p>
 
-            <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
-                <span><strong>🔹 ΔP</strong> (Pascal)</span>
-                <span><strong>🔹 ACH</strong> (air changes/hr)</span>
-                <span><strong>🔹 IPC</strong> (Infection Control)</span>
-                <span><strong>🔹 WO</strong> (work order)</span>
-            </div>
+        <div class="formula-block">
+            <h4 style="margin-top: 0; color: #0047ab;">📌 معادلات حساب ACH (معدل تغيير الهواء)</h4>
+            
+            <p style="font-weight: 600; margin-bottom: 5px;">🔹 النظام المتري (SI):</p>
+            <p style="font-size: 1.2rem; background: #f0f7ff; padding: 8px; border-radius: 12px;">
+                \[ACH = \frac{Q}{V}\]
+            </p>
+            <p><em>Q = معدل تدفق الهواء (m³/h)  |  V = حجم الغرفة (m³) = الطول × العرض × الارتفاع</em></p>
+            
+            <p style="font-weight: 600; margin: 15px 0 5px;">🔹 النظام الأمريكي (Imperial):</p>
+            <p style="font-size: 1.2rem; background: #f0f7ff; padding: 8px; border-radius: 12px;">
+                \[ACH = \frac{CFM \times 60}{Volume\ (ft^3)}\]
+            </p>
+            <p><em>CFM = قدم مكعب/دقيقة  |  Volume = الطول بالقدم × العرض بالقدم × الارتفاع بالقدم</em></p>
+            
+            <hr style="margin: 15px 0;">
+            <p><strong>⚡ معادلات إضافية:</strong><br>
+            - تحويل CFM إلى m³/h: \( Q = CFM \times 1.699 \)<br>
+            - تحويل قدم مكعب إلى متر مكعب: \( V = Volume\ (ft^3) \times 0.0283 \)<br>
+            - حساب التدفق من سرعة الهواء: \( Q = A \times v \times 3600 \) (للمتري) أو \( Q = A \times v \times 2118.9 \) (للأمريكي)
+            </p>
+
+            <p><strong>📊 معادلة الضغط التفاضلي:</strong><br>
+            \[\Delta P = \frac{1}{2} \rho v^{2}, \quad \rho \approx 1.2\ \text{kg/m}^3\]
+            </p>
         </div>
 
         <!-- JOB ORDER NOTE -->
